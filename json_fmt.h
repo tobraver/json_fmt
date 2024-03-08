@@ -6,9 +6,9 @@
 
 // json value, parse, create
 #define Json_t              nlohmann::json
-#define Json_Parse          nlohmann::json::parse
-#define Json_Create(json)   json.dump()
-#define Json_Format(json)   json.dump(4)
+#define Json_Parse(string)  nlohmann::json::parse(string)
+#define Json_Create(object) object.dump()
+#define Json_Format(object) object.dump(4)
 
 // define struct type to json
 #define JSON_DEFINE_TYPE    NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE
